@@ -1,5 +1,7 @@
+#include "Scene/Scene.h"
 #include "gtest/gtest.h"
 
-TEST(SceneTests, test){
-    EXPECT_EQ(true,true);
+TEST(ImageProcessorCase, PngCreatorProcessTest) {
+    PngCreator pngCreator;
+    EXPECT_EQ(pngCreator.create()->test(), image_t::PNG);
 }
