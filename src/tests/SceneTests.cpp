@@ -1,7 +1,10 @@
 #include "Scene/Scene.h"
 #include "gtest/gtest.h"
 
-TEST(ImageProcessorCase, PngCreatorProcessTest) {
-    PngCreator pngCreator;
-    EXPECT_EQ(pngCreator.create()->test(), image_t::PNG);
+TEST(ImageConverterCase, PngConverterTest) {
+
+    auto bmpStab = std::make_unique<BmpImage>();
+
+    PngConverter pngConverter;
+    EXPECT_EQ(pngConverter.convert(std::move(bmpStab))->getType(), image_t::PNG);
 }
