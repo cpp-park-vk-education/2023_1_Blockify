@@ -308,7 +308,7 @@
         </mxGraphModel>
     </diagram>
     <diagram id="4uJNxkg9737gK_eH-HrE" name="View">
-        <mxGraphModel dx="1298" dy="819" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="1654" math="0" shadow="0">
+        <mxGraphModel dx="1103" dy="664" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="1654" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -382,7 +382,7 @@
                     <mxGeometry y="70" width="160" height="8" as="geometry"/>
                 </mxCell>
                 <mxCell id="uxwvBRQCrMAlWaygALZF-1" value="AddObjectOperation" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-                    <mxGeometry x="383" y="867" width="160" height="278" as="geometry"/>
+                    <mxGeometry x="383" y="850" width="160" height="278" as="geometry"/>
                 </mxCell>
                 <mxCell id="1l4zu_6U2HC8lAQ1K7yM-4" value="- object_: IObject" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="uxwvBRQCrMAlWaygALZF-1" vertex="1">
                     <mxGeometry y="26" width="160" height="26" as="geometry"/>
@@ -616,7 +616,7 @@
                     </mxGeometry>
                 </mxCell>
                 <mxCell id="JfyZGk_Ma1F3U0DyjmZe-15" value="&amp;lt;&amp;lt;interface&amp;gt;&amp;gt;&lt;br&gt;IStateManager" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=44;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-                    <mxGeometry x="383" y="338" width="160" height="160" as="geometry"/>
+                    <mxGeometry x="383" y="338" width="160" height="186" as="geometry"/>
                 </mxCell>
                 <mxCell id="JfyZGk_Ma1F3U0DyjmZe-16" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="JfyZGk_Ma1F3U0DyjmZe-15">
                     <mxGeometry y="44" width="160" height="8" as="geometry"/>
@@ -630,6 +630,9 @@
                 <mxCell id="uxwvBRQCrMAlWaygALZF-14" value="+ addObject(object: IObject): void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="JfyZGk_Ma1F3U0DyjmZe-15" vertex="1">
                     <mxGeometry y="120" width="160" height="40" as="geometry"/>
                 </mxCell>
+                <mxCell id="JfyZGk_Ma1F3U0DyjmZe-21" value="+ undoLastOperation(): void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="JfyZGk_Ma1F3U0DyjmZe-15">
+                    <mxGeometry y="160" width="160" height="26" as="geometry"/>
+                </mxCell>
                 <mxCell id="JfyZGk_Ma1F3U0DyjmZe-20" value="Extends" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;" edge="1" parent="1" source="uxwvBRQCrMAlWaygALZF-11" target="JfyZGk_Ma1F3U0DyjmZe-15">
                     <mxGeometry width="160" relative="1" as="geometry">
                         <mxPoint x="915" y="459.9999999999998" as="sourcePoint"/>
@@ -640,7 +643,7 @@
         </mxGraphModel>
     </diagram>
     <diagram id="bsdWH7dnZxSQvib-KoD_" name="App">
-        <mxGraphModel dx="1103" dy="696" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="1654" math="0" shadow="0">
+        <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="1169" pageHeight="1654" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
