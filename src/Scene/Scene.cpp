@@ -8,12 +8,12 @@ Scene::Scene(ICamera& camera, IFileManager& fileManager, std::unique_ptr<IImageC
 
 std::unique_ptr<IImage> Scene::preview()
 {
-  auto pngImage = pngConverter_->convert(camera_.getMap());
+  auto pngImage = pngConverter_->convert(camera_.getMap().get());
   return pngImage;
 }
 
 void Scene::generate()
 {
-  auto pngImage = pngConverter_->convert(camera_.getMap());
-  fileManager_.saveImage(std::move(pngImage));
+  auto pngImage = pngConverter_->convert(camera_.getMap().get());
+  fileManager_.saveImage(pngImage.get());
 }

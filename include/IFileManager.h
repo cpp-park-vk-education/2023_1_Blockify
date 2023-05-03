@@ -6,6 +6,6 @@ class IFileManager {
 
 public:
 
-  virtual void saveImage(std::shared_ptr<IImage> image);
+  virtual void saveImage(const IImage* image) = 0;
 
 };

@@ -10,6 +10,6 @@ public:
 
     virtual ~IImageConverter() = default;
 
-    virtual std::unique_ptr<IImage> convert(std::shared_ptr<IImage> image) = 0;
+    virtual std::unique_ptr<IImage> convert(const IImage* image) = 0;
 
 };

@@ -5,6 +5,10 @@ project(VoxelEngine VERSION 1.0)
 set(CMAKE_CXX_STANDARD 20)
 option(BUILD_TESTS "Conditional test build" ON)
 
-enable_testing()
+if(BUILD_TESTS)
+    enable_testing()
+    add_subdirectory(lib/googletest)
+endif()
+
 add_subdirectory(src)
 
