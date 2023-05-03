@@ -1,4 +1,5 @@
 #pragma once
+
 #include "ICamera.h"
 #include "IFileManager.h"
 #include "PngConverter.h"
@@ -7,19 +8,19 @@ class Scene {
 
 public:
 
-  Scene(ICamera& camera, IFileManager& fileManager, std::unique_ptr<IImageConverter> pngConverter);
+    explicit Scene(ICamera &camera, IFileManager &fileManager, std::unique_ptr<IImageConverter> pngConverter);
 
-  std::unique_ptr<IImage> preview();
+    std::unique_ptr<IImage> preview();
 
-  void generate();
+    void generate();
 
 private:
 
-  ICamera& camera_;
+    ICamera &camera_;
 
-  IFileManager& fileManager_;
+    IFileManager &fileManager_;
 
-  std::unique_ptr<IImageConverter> pngConverter_;
+    std::unique_ptr<IImageConverter> pngConverter_;
 
 };
 
