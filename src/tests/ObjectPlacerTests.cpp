@@ -3,17 +3,17 @@
 #include "gtest/gtest.h"
 #include "gmock/gmock.h"
 
-class LandScapeStub: public IObjectFactory {
+class LandScapeStub : public IObjectFactory {
 public:
     virtual std::vector<IObject> make() override { return std::vector<IObject>(10); };
 };
 
-class LandScapeMock: public IObjectFactory {
+class LandScapeMock : public IObjectFactory {
 public:
     MOCK_METHOD(std::vector<IObject>, make, (), (override));
 };
 
-class ObjectPlacerTestFixture: public testing::Test {
+class ObjectPlacerTestFixture : public testing::Test {
 public:
 
     std::unique_ptr<ObjectPlacer> objectPlacer_;
@@ -31,7 +31,7 @@ public:
 
 TEST_F(ObjectPlacerTestFixture, ObjectPlacerLandScapeMakeCall) {
 
-    auto& landScapeMock = *(landScapeMock_.get());
+    auto &landScapeMock = *(landScapeMock_.get());
     objectPlacer_ = std::make_unique<ObjectPlacer>(std::move(landScapeMock_));
     EXPECT_CALL(landScapeMock, make);
 
@@ -44,7 +44,7 @@ TEST_F(ObjectPlacerTestFixture, LandScapeObjectsReturn) {
     EXPECT_EQ(objectPlacer_->makeLandScape().size(), stubObjectNUm);
 }
 
-TEST(LandScapeTestSuit, LandScapeMakeCall){
+TEST(LandScapeTestSuit, LandScapeMakeCall) {
     LandScape landScape;
     EXPECT_GT(landScape.make().size(), 1);
 }
