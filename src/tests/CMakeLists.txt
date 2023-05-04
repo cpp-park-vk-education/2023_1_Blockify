@@ -1,7 +1,3 @@
-add_executable(SceneTests SceneTests.cpp)
-target_link_libraries(SceneTests gtest gtest_main pthread)
-add_test(SceneTestSuit SceneTests)
-
-add_executable(ObjectPlacerTests ObjectPlacerTests.cpp)
-target_link_libraries(ObjectPlacerTests gtest gtest_main pthread)
-add_test(ObjectPlacerTestsSuit ObjectPlacerTests)
+add_executable(StateManagerTests StateManagerTests.cpp)
+target_link_libraries(StateManagerTests gtest gtest_main gmock gmock_main pthread)
+add_test(StateManagerTestSuit StateManagerTests)
