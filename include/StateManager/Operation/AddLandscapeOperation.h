@@ -5,8 +5,8 @@
 #include <memory>
 class AddLandscapeOperation : public IOperation {
     public:
-        AddObjectOperation(std::shared_ptr<IVoxelEngine>, std::shared_ptr<IObject>, int);
-        ~AddObjectOperation() = default;
+        AddLandscapeOperation(std::shared_ptr<IVoxelEngine>, std::shared_ptr<IObject>, int);
+        ~AddLandscapeOperation() = default;
         void execute() override;
         void undo() override;
 };
