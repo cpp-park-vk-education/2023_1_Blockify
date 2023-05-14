@@ -1,3 +1,0 @@
-add_executable(StateManagerTests StateManagerTests.cpp)
-target_link_libraries(StateManagerTests gtest gtest_main gmock gmock_main pthread)
-add_test(StateManagerTestSuit StateManagerTests)

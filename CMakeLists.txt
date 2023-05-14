@@ -7,4 +7,3 @@ option(BUILD_TESTS "Conditional test build" ON)
 
 enable_testing()
 add_subdirectory(src)
-

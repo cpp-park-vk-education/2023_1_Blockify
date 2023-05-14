@@ -1,6 +1,5 @@
-add_executable(VoxelEngine main.cpp)
+add_subdirectory(StateManager)
 
-if(BUILD_TESTS)
-    find_package(GTest REQUIRED)
-    add_subdirectory(tests)
-endif()
+
+add_executable(VoxelEngine main.cpp)
+target_link_libraries(VoxelEngine statemanager)
