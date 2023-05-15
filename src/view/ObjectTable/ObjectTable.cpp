@@ -1,6 +1,6 @@
 #include "ObjectTable.h"
 #include <vector>
-
+#include <exception>
 ObjectTable::ObjectTable(QTableWidget *table) : table_(table) {}
 void ObjectTable::addItem(int row, std::shared_ptr<IObject> object)
 {
@@ -92,4 +92,25 @@ void ObjectTable::deleteItem(int row)
 int ObjectTable::getHeight()
 {
     return table_->rowCount();
+}
+
+int ObjectTable::getCurrentRow()
+{
+    int row = table_->currentRow();
+    if (row < 0)
+    {
+        throw std::out_of_range("No row chosen");
+    }
+    return row;
+}
+
+std::shared_ptr<IObject> ObjectTable::getItem(int row)
+{
+    float x = table_->itemAt(row, 0)->text().toDouble();
+    float y = table_->itemAt(row, 1)->text().toDouble();
+    float z = table_->itemAt(row, 2)->text().toDouble();
+
+    auto color = table_->itemAt(row, 3)->backgroundColor();
+
+    return std::make_shared<IObject>();
 }

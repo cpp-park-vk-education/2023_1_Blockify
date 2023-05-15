@@ -29,6 +29,10 @@ public:
 
 public slots:
   void setColor();
+  void addObject();
+  void deleteObject();
+  void Undo();
+  void createLandscape();
 
 private:
   Ui::MainWindow *ui;
