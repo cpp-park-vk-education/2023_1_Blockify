@@ -23,6 +23,8 @@ MainWindow::MainWindow(QWidget *parent)
   this, &MainWindow::createLandscape);
   QObject::connect(this->findChild<QPushButton *>("pushButton_6"), &QPushButton::clicked,
   this, &MainWindow::Undo);
+  QObject::connect(this->findChild<QAction *>("actionAbout"), &QAction::triggered,
+  this, &MainWindow::about);
 
   object_drawer_ = std::make_shared<ObjectDrawer>(this->findChild<QOpenGLWidget *>("openGLWidget"));
   object_table_ = std::make_shared<ObjectTable>(this->findChild<QTableWidget *>("tableWidget"));
@@ -85,4 +87,12 @@ void MainWindow::createLandscape()
 void MainWindow::Undo()
 {
   state_manager_->Undo();
+}
+
+
+void MainWindow::about()
+{
+  QMessageBox about_box;
+  about_box.setText("This application is called Blockify. It is a game engine based on voxels.");
+  about_box.exec();
 }

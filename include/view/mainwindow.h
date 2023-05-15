@@ -33,6 +33,7 @@ public slots:
   void deleteObject();
   void Undo();
   void createLandscape();
+  void about();
 
 private:
   Ui::MainWindow *ui;
