@@ -20,17 +20,17 @@ public:
 
 class CameraStub : public ICamera {
 public:
-    virtual std::unique_ptr<IImage> getMap() { return std::make_unique<BmpImage>(); };
+    virtual std::unique_ptr<IImage> getMap() { return std::make_unique<BmpImage>(); }
 };
 
 class FileManagerStub : public IFileManager {
 public:
-    virtual void saveImage(const IImage *) {};
+    virtual void saveImage(const IImage *) {}
 };
 
 class ImageConverterStub : public IImageConverter {
 public:
-    virtual std::unique_ptr<IImage> convert(const IImage * = nullptr) { return std::make_unique<PngImage>(); };
+    virtual std::unique_ptr<IImage> convert(const IImage * = nullptr) { return std::make_unique<PngImage>(); }
 };
 
 class SceneTestFixture : public testing::Test {

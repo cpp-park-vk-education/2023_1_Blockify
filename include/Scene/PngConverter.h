@@ -1,5 +1,4 @@
 #pragma once
-
 #include "IImageConverter.h"
 
 class PngConverter : public IImageConverter {

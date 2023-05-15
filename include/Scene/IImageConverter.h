@@ -3,6 +3,7 @@
 #include <memory>
 #include "IImage.h"
 
+
 class IImageConverter {
 
 public:
