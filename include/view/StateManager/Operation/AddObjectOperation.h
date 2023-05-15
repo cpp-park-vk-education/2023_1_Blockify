@@ -1,7 +1,7 @@
 #pragma once
 #include "IOperation.h"
 #include "IObject.h"
-#include "IVoxelEngine.h"
+#include "VoxelEngine/IVoxelEngine.h"
 #include "IObjectDrawer.h"
 #include "IObjectTable.h"
 #include <memory>

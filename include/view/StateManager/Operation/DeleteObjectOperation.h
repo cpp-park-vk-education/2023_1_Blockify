@@ -2,7 +2,7 @@
 #include "IOperation.h"
 #include "IObject.h"
 #include "IObjectDrawer.h"
-#include "IVoxelEngine.h"
+#include "VoxelEngine/IVoxelEngine.h"
 #include "IObjectTable.h"
 #include <memory>
 class DeleteObjectOperation : public IOperation {
