@@ -10,7 +10,9 @@ ${VoxelEngine_SOURCE_DIR}/include/view
 ${VoxelEngine_SOURCE_DIR}/include/view/StateManager
 ${VoxelEngine_SOURCE_DIR}/include/view/StateManager/Operation
 ${VoxelEngine_SOURCE_DIR}/include/view/ObjectTable
-${VoxelEngine_SOURCE_DIR}/include/view/ObjectDrawer)
+${VoxelEngine_SOURCE_DIR}/include/view/ObjectDrawer
+${VoxelEngine_SOURCE_DIR}/include/ObjectPlacer
+)
 
 set(CMAKE_AUTOUIC ON)
 set(CMAKE_AUTOMOC ON)

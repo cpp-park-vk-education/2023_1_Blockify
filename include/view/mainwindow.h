@@ -25,7 +25,7 @@ public:
   MainWindow(QWidget *parent = nullptr);
   ~MainWindow();
   QColor getColor();
-  std::shared_ptr<IObjectFactory> getFactory();
+  std::shared_ptr<IObjectFactoryGUI> getFactory();
 
 public slots:
   void setColor();
@@ -34,10 +34,12 @@ public slots:
   void Undo();
   void createLandscape();
   void about();
+  void showPreview();
+  void generateImage();
 
 private:
   Ui::MainWindow *ui;
-  std::shared_ptr<IObjectFactory> object_factory_;
+  std::shared_ptr<IObjectFactoryGUI> object_factory_;
   std::shared_ptr<QColorDialog> color_dialog_;
   std::shared_ptr<IObjectDrawer> object_drawer_;
   std::shared_ptr<IObjectTable> object_table_;

@@ -2,7 +2,7 @@
 
 #include "IObjectFactory.h"
 #include "mainwindow.h"
-class ObjectFactory : public IObjectFactory
+class ObjectFactory : public IObjectFactoryGUI
 {
     public:
       ObjectFactory(QMainWindow *window);

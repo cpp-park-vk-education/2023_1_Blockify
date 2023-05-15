@@ -2,6 +2,7 @@
 #include "ui_mainwindow.h"
 #include <QColorDialog>
 #include <QMessageBox>
+#include "LandScape.h"
 
 MainWindow::MainWindow(QWidget *parent)
   : QMainWindow(parent)
@@ -25,6 +26,10 @@ MainWindow::MainWindow(QWidget *parent)
   this, &MainWindow::Undo);
   QObject::connect(this->findChild<QAction *>("actionAbout"), &QAction::triggered,
   this, &MainWindow::about);
+  QObject::connect(this->findChild<QPushButton *>("pushButton_4"), &QPushButton::clicked,
+  this, &MainWindow::showPreview);
+  QObject::connect(this->findChild<QPushButton *>("pushButton_5"), &QPushButton::clicked,
+  this, &MainWindow::generateImage);
 
   object_drawer_ = std::make_shared<ObjectDrawer>(this->findChild<QOpenGLWidget *>("openGLWidget"));
   object_table_ = std::make_shared<ObjectTable>(this->findChild<QTableWidget *>("tableWidget"));
@@ -45,7 +50,7 @@ void MainWindow::setColor()
   color_label->setPalette(palette);
 }
 
-std::shared_ptr<IObjectFactory> MainWindow::getFactory()
+std::shared_ptr<IObjectFactoryGUI> MainWindow::getFactory()
 {
   return object_factory_;
 }
@@ -81,7 +86,12 @@ void MainWindow::deleteObject()
 
 void MainWindow::createLandscape()
 {
+  // здесь нужно дергать ObjectPlayer в Engine
+  LandScape landscape;
+  std::vector<IObject> object_array = landscape.make();
+  state_manager_->addLandscape();
   return;
+
 }
 
 void MainWindow::Undo()
@@ -95,4 +105,14 @@ void MainWindow::about()
   QMessageBox about_box;
   about_box.setText("This application is called Blockify. It is a game engine based on voxels.");
   about_box.exec();
+}
+
+void MainWindow::showPreview()
+{
+  return;
+}
+
+void MainWindow::generateImage()
+{
+  return;
 }
