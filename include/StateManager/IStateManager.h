@@ -1,6 +1,6 @@
 #pragma once
 #include "IOperationStorage.h"
-#include "../IObject.h"
+#include "IObject.h"
 #include <memory>
 class IStateManager {
     public:

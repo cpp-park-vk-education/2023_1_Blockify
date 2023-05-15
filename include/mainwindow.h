@@ -3,6 +3,8 @@
 
 #include <QMainWindow>
 #include "ObjectFactory.h"
+#include "IObjectFactory.h"
+#include <memory>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -18,6 +20,6 @@ public:
 
 private:
   Ui::MainWindow *ui;
-  IObjectFactory *object_factory;
+  std::shared_ptr<IObjectFactory> object_factory;
 };
 #endif // MAINWINDOW_H

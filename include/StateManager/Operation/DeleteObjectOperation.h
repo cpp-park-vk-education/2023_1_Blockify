@@ -3,6 +3,7 @@
 #include "IObject.h"
 #include "IObjectDrawer.h"
 #include "IVoxelEngine.h"
+#include "IObjectTable.h"
 #include <memory>
 class DeleteObjectOperation : public IOperation {
     public:

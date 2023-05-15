@@ -1,7 +1,8 @@
 set(PROJECT_SOURCES
-mainwindow.h
+${VoxelEngine_SOURCE_DIR}/include/mainwindow.h
 mainwindow.cpp
 mainwindow.ui
+ObjectFactory.cpp
 )
 set(HEADERS
 ${VoxelEngine_SOURCE_DIR}/include

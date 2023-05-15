@@ -6,6 +6,7 @@ MainWindow::MainWindow(QWidget *parent)
   , ui(new Ui::MainWindow)
 {
   ui->setupUi(this);
+  object_factory = std::make_shared<ObjectFactory>(this);
 }
 
 MainWindow::~MainWindow()
