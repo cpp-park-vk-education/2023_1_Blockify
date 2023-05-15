@@ -1,6 +1,7 @@
 #pragma once
 #include "IOperationStorage.h"
 #include <stack>
+#include <exception>
 class OperationStorage : public IOperationStorage {
     public:
         void push_operation(std::shared_ptr<IOperation>) override;

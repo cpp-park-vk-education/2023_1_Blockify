@@ -1,4 +1,5 @@
 #include "StateManager.h"
+#include <QMessageBox>
 
 void StateManager::deleteObject(int row, std::shared_ptr<IObject> object)
 {
@@ -20,4 +21,22 @@ void StateManager::addLandscape()
 StateManager::StateManager(std::shared_ptr<IObjectTable> object_table) : object_table_(object_table)
 {
     operation_storage_ = std::make_shared<OperationStorage>();
+}
+
+void StateManager::Undo()
+{
+    std::shared_ptr<IOperation> operation;
+    try
+    {
+        operation = operation_storage_->pop_operation();
+    }
+    catch(const std::exception& e)
+    {
+        QMessageBox error;
+        error.setText(e.what());
+        error.exec();
+        return;
+    }
+
+    operation->undo();
 }

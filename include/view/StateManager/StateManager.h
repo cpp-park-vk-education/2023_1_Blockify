@@ -13,6 +13,7 @@ class StateManager: public IStateManager {
         void deleteObject(int, std::shared_ptr<IObject>) override;
         void addObject(std::shared_ptr<IObject>) override;
         void addLandscape() override;
+        void Undo() override;
     private:
         std::shared_ptr<IObjectTable> object_table_;
         std::shared_ptr<IOperationStorage> operation_storage_;
