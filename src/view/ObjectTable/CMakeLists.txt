@@ -1,5 +1,4 @@
 set(LIB_SOURCES
-    AddObjectOperation.cpp
-    DeleteObjectOperation.cpp
+    ObjectTable.cpp
 )
 target_sources(view PRIVATE ${LIB_SOURCES})

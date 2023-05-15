@@ -1,6 +1,6 @@
 #pragma once
 #include <memory>
-#include "../IObject.h"
+#include "IObject.h"
 class IObjectTable{
   public:
     virtual void addItem(int, std::shared_ptr<IObject>) = 0;

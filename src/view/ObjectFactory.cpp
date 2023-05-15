@@ -13,6 +13,8 @@ std::shared_ptr<IObject> ObjectFactory::createObject()
     float z = window_->findChild<QLineEdit *>("lineEdit_2")->text().toFloat();
     auto color = window_->findChild<QLabel *>("label_4")->palette().color(QPalette::Window);
     QVector3D coords = QVector3D(x, y, z);
+
+    // создать обьект с данными сверху
     return std::make_shared<IObject>();
 }
 

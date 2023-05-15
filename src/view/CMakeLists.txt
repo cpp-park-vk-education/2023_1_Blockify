@@ -23,3 +23,5 @@ target_link_libraries(view PRIVATE Qt${QT_VERSION_MAJOR}::Widgets)
 target_include_directories(view PUBLIC ${HEADERS})
 
 add_subdirectory(StateManager)
+add_subdirectory(ObjectTable)
+add_subdirectory(ObjectDrawer)

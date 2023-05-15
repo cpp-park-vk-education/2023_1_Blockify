@@ -11,4 +11,9 @@ class AddObjectOperation : public IOperation {
         ~AddObjectOperation() = default;
         void execute() override;
         void undo() override;
+    private:
+        std::shared_ptr<IVoxelEngine> engine_;
+        std::shared_ptr<IObject> object_;
+        std::shared_ptr<IObjectTable> object_table_;
+        int row_;
 };
