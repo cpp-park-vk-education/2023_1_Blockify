@@ -18,6 +18,7 @@ class MainWindow : public QMainWindow
 public:
   MainWindow(QWidget *parent = nullptr);
   ~MainWindow();
+  QColor getColor();
 
 public slots:
   void setColor();

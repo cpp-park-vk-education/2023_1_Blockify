@@ -28,3 +28,8 @@ void MainWindow::setColor()
   palette.setColor(QPalette::Window, color);
   color_label->setPalette(palette);
 }
+
+QColor MainWindow::getColor()
+{
+  return color_dialog_->selectedColor();
+}
