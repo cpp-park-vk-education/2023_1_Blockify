@@ -88,3 +88,8 @@ void ObjectTable::deleteItem(int row)
 {
     table_->removeRow(row);
 }
+
+int ObjectTable::getHeight()
+{
+    return table_->rowCount();
+}

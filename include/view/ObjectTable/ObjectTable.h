@@ -8,6 +8,7 @@ public:
     void addItem(int, std::shared_ptr<IObject>) override;
     void setItem(int, std::shared_ptr<IObject>) override;
     void deleteItem(int) override;
+    int getHeight() override;
 private:
     QTableWidget *table_;
 };

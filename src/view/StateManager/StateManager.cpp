@@ -1,12 +1,17 @@
 #include "StateManager.h"
 
-void StateManager::deleteObject(std::shared_ptr<IObject>)
+void StateManager::deleteObject(int row, std::shared_ptr<IObject> object)
 {
-    return;
+    std::shared_ptr<IOperation> operation = std::make_shared<DeleteObjectOperation>(object, row, object_table_);
+    operation->execute();
+    operation_storage_->push_operation(operation);
 }
-void StateManager::addObject(std::shared_ptr<IObject>)
+void StateManager::addObject(std::shared_ptr<IObject> object)
 {
-    return;
+    int row = object_table_->getHeight();
+    std::shared_ptr<IOperation> operation = std::make_shared<AddObjectOperation>(object, row, object_table_);
+    operation->execute();
+    operation_storage_->push_operation(operation);
 }
 void StateManager::addLandscape()
 {
