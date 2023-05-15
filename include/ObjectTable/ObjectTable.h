@@ -7,7 +7,7 @@ public:
     ObjectTable(QTableWidget *);
     void addItem(int, std::shared_ptr<IObject>) override;
     void setItem(int, std::shared_ptr<IObject>) override;
-    void deleteItem(int, std::shared_ptr<IObject>) override;
+    void deleteItem(int) override;
 private:
     QTableWidget *table_;
 };

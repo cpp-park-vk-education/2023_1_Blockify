@@ -2,7 +2,7 @@
 
 void OperationStorage::push_operation(std::shared_ptr<IOperation> operation)
 {
-    return;
+    operations_.push(operation);
 }
 
 std::shared_ptr<IOperation> OperationStorage::pop_operation()
