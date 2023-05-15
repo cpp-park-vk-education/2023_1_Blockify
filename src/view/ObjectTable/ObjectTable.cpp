@@ -110,7 +110,7 @@ std::shared_ptr<IObject> ObjectTable::getItem(int row)
     float y = table_->itemAt(row, 1)->text().toDouble();
     float z = table_->itemAt(row, 2)->text().toDouble();
 
-    auto color = table_->itemAt(row, 3)->backgroundColor();
+    auto color = table_->itemAt(row, 3)->background().color();
 
     return std::make_shared<IObject>();
 }
