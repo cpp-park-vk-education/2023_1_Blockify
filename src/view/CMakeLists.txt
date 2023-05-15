@@ -1,15 +1,16 @@
 set(PROJECT_SOURCES
-${VoxelEngine_SOURCE_DIR}/include/mainwindow.h
+${VoxelEngine_SOURCE_DIR}/include/view/mainwindow.h
 mainwindow.cpp
 mainwindow.ui
 ObjectFactory.cpp
 )
 set(HEADERS
 ${VoxelEngine_SOURCE_DIR}/include
-${VoxelEngine_SOURCE_DIR}/include/StateManager
-${VoxelEngine_SOURCE_DIR}/include/StateManager/Operation
-${VoxelEngine_SOURCE_DIR}/include/ObjectTable
-${VoxelEngine_SOURCE_DIR}/include/ObjectDrawer)
+${VoxelEngine_SOURCE_DIR}/include/view
+${VoxelEngine_SOURCE_DIR}/include/view/StateManager
+${VoxelEngine_SOURCE_DIR}/include/view/StateManager/Operation
+${VoxelEngine_SOURCE_DIR}/include/view/ObjectTable
+${VoxelEngine_SOURCE_DIR}/include/view/ObjectDrawer)
 
 set(CMAKE_AUTOUIC ON)
 set(CMAKE_AUTOMOC ON)
