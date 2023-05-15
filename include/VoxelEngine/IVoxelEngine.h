@@ -8,13 +8,13 @@ class IVoxelEngine{
 
 public:
 
-    virtual void addObject() = 0;
+    virtual void addObject(const std::vector<IObject>& objectVec) = 0;
 
     virtual void deleteObject() = 0;
 
-    virtual std::shared_ptr<IObject> editObject(int) = 0;
+    virtual IObject& editObject(const point3d_t point) = 0;
 
-    virtual std::shared_ptr<IObjectStorage> readStorage() = 0;
+    virtual const IObjectStorage& readStorage() = 0;
 
     virtual void defaultScene() = 0;
 
