@@ -13,6 +13,9 @@ MainWindow::MainWindow(QWidget *parent)
   color_dialog_->setCurrentColor(black_color.black());
   QObject::connect(this->findChild<QPushButton *>("pushButton_2"), &QPushButton::clicked,
   this, &MainWindow::setColor);
+  object_drawer_ = std::make_shared<ObjectDrawer>(this->findChild<QOpenGLWidget *>("openGLWidget"));
+  object_table_ = std::make_shared<ObjectTable>(this->findChild<QTableWidget *>("tableWidget"));
+  state_manager_ = std::make_shared<StateManager>(object_table_);
 }
 
 MainWindow::~MainWindow()
@@ -27,6 +30,11 @@ void MainWindow::setColor()
   QPalette palette = color_label->palette();
   palette.setColor(QPalette::Window, color);
   color_label->setPalette(palette);
+}
+
+std::shared_ptr<IObjectFactory> MainWindow::getFactory()
+{
+  return object_factory_;
 }
 
 QColor MainWindow::getColor()

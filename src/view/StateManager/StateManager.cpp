@@ -12,7 +12,7 @@ void StateManager::addLandscape()
 {
     return;
 }
-StateManager::StateManager(std::shared_ptr<IObjectTable>, std::shared_ptr<IOperationStorage>)
+StateManager::StateManager(std::shared_ptr<IObjectTable> object_table) : object_table_(object_table)
 {
-
+    operation_storage_ = std::make_shared<OperationStorage>();
 }
