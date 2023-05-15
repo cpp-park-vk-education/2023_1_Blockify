@@ -1,0 +1,7 @@
+add_executable(SceneTests SceneTests.cpp)
+target_link_libraries(SceneTests VoxelEngineFunctionLib png gtest gtest_main gmock gmock_main pthread)
+add_test(SceneTestCase SceneTests)
+
+add_executable(ObjectPlacerTests ObjectPlacerTests.cpp)
+target_link_libraries(ObjectPlacerTests VoxelEngineFunctionLib png gtest gtest_main gmock gmock_main pthread)
+add_test(ObjectPlacerTestCase ObjectPlacerTests)
