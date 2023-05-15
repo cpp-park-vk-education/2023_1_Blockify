@@ -9,6 +9,8 @@ MainWindow::MainWindow(QWidget *parent)
   ui->setupUi(this);
   object_factory_ = std::make_shared<ObjectFactory>(this);
   color_dialog_ = std::make_shared<QColorDialog>(this);
+  QColor black_color;
+  color_dialog_->setCurrentColor(black_color.black());
   QObject::connect(this->findChild<QPushButton *>("pushButton_2"), &QPushButton::clicked,
   this, &MainWindow::setColor);
 }
