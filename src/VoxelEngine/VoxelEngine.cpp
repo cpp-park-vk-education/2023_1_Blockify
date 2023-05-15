@@ -28,12 +28,12 @@ void VoxelEngine::defaultScene()
 //   emit newObjectsAvailable;
 }
 
-void VoxelEngine::previewScene()
+std::unique_ptr<IImage> VoxelEngine::previewScene()
 {
-    return Scene.preview();
+    return scene_.preview();
 }
 
 void VoxelEngine::generateScene()
 {
-    Scene.generate();
+    scene_.generate();
 }
