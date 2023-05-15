@@ -11,13 +11,13 @@ class VoxelEngine {
 
 public:
 
-    virtual void addObject() = 0;
+    virtual void addObject(const std::vector<IObject>& objectVec);
 
-    virtual void deleteObject() = 0;
+    virtual void deleteObject();
 
-    virtual std::shared_ptr<IObject> editObject(int) = 0;
+    virtual IObject& editObject(const point3d_t point);
 
-    virtual std::shared_ptr<IObjectStorage> readStorage() = 0;
+    virtual const IObjectStorage& readStorage();
 
     virtual void defaultScene();
 

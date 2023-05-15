@@ -6,9 +6,10 @@ class IObjectStorage {
 
 public:
 
-    void add(const std::vector<IObject>& unit);
+    virtual void add(const std::vector<IObject>& unit) = 0;
 
-    void del(const point3d_t& point);
+    virtual void del(const point3d_t& point) = 0;
 
+    virtual IObject& getObject(const point3d_t& point) = 0;
 
 };
