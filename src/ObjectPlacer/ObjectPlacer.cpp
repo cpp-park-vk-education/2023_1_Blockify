@@ -4,5 +4,10 @@ ObjectPlacer::ObjectPlacer(std::unique_ptr<IObjectFactory> landScape): landScape
 }
 
 std::vector<IObject> ObjectPlacer::makeLandScape() {
+
+
+
+
+
     return landScape_->make();
 }
