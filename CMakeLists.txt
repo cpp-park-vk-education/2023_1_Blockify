@@ -1,21 +1,14 @@
 cmake_minimum_required(VERSION 3.0.0)
 project(prod VERSION 0.1.0)
 
-add_subdirectory(glfw)
-add_subdirectory(glew)
-add_subdirectory(glm)
-add_subdirectory(freeglut-3.4.0)
-add_subdirectory(prod)
+find_package(OpenGL REQUIRED)
+find_package(GLUT REQUIRED)
+find_package(glfw3 3.3 REQUIRED)
 
-target_include_directories(prod PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/glew/include)
-target_include_directories(prod PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/glfw/include)
-target_include_directories(prod PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/freeglut-3.4.0/include)
+add_executable(prod prod/main.cpp prod/cube.cpp prod/cube.hpp)
 
-include(CTest)
-enable_testing()
+# Еще требуется установка glm
+target_include_directories(prod PUBLIC ${OPENGL_INCLUDE_DIRS}  ${GLUT_INCLUDE_DIRS})
+target_link_libraries(prod glfw ${OPENGL_LIBRARIES} ${GLUT_LIBRARY})
 
 
-
-set(CPACK_PROJECT_NAME ${PROJECT_NAME})
-set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
-include(CPack)
